@@ -21,3 +21,18 @@ y4 = [ln_taylor(x,30) for x in x_values]
 y5 = [ln_taylor(x,60) for x in x_values]
 y6 = [ln_taylor(x,80) for x in x_values]
 y7 = [ln_taylor(x,100) for x in x_values]
+
+# Plotting
+plt.plot(x_values, y2, label='Approx, iter=5')
+plt.plot(x_values, y3, label='Approx, iter=10')
+plt.plot(x_values, y4, label='Approx, iter=30')
+plt.plot(x_values, y5, label='Approx, iter=60')
+plt.plot(x_values, y6, label='Approx, iter=80')
+plt.plot(x_values, y7, label='Approx, iter=100')
+plt.plot(x_values, y1, label='Exact ln(x)')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Comparison of Taylor Series Approximation and Exact ln(x)')
+plt.legend()
+plt.axvline(x=2, color='green', linestyle='--', label='x=2')
+plt.show()
